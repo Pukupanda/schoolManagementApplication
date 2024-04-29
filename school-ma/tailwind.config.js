@@ -11,7 +11,8 @@ module.exports = {
         sm:{
           green:'#5BCE60',
           darkblue:'#1B2835',
-          lightblue:'#3498DB'
+          lightblue:'#3498DB',
+          blue:'#1d5478',
         }
       },
       backgroundImage: {

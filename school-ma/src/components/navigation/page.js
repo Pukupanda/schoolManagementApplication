@@ -28,7 +28,7 @@ const Navbar = () => {
             <SearchIcon className="text-slate-100" />
           </div>
 
-          <div>
+          <div className="relativ">
             <button  onClick={showNavBar}>
               {openMenu ? (
                 <MenuIcon className="bg-primary w-32 h-8 rounded-lg text-white" />
@@ -38,7 +38,7 @@ const Navbar = () => {
             </button>
 
             {openMenu && (
-              <div className="w-48 bg-sm-green text-white absulate top-6 grid justify-items-center">
+              <div className="w-48 bg-sm-green text-white absulate top-6 grid justify-items-center absolute z-30 p-2">
                 <a className="py-2 border-b-2 w-full">Abut Us</a>
                 <a className="py-2 border-b-2 w-full">Academics</a>
                 <a className="py-2 border-b-2 w-full">Admission</a>
