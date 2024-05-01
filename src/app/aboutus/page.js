@@ -191,35 +191,45 @@ function About({ backgroundColor }) {
             Health and Safety
           </h1>
           <div className="w-10/12 m-auto flex pb-10">
-            <div className="w-2/4">
-              <div className="flex">
+            <div className="w-2/5">
+              <div className="flex justify-between ">
                 <div className="mt-40 bg-sm-green rounded-full w-20 h-20 p-6">
                   <HealthAndSafetyIcon />
                 </div>
 
-                <div className="grid gap-20">
-                  <div className="flex">
-                    <div className=" " style={{ rotate: '1 1 0 60deg' }}>
-                    _ __ __ __ __ __ __ __ _ _ __ __ __ __ __ __ __ _ 
+                <div className="grid gap-20 mr-14">
+                  <div className="flex relative" >
+                    <div className="line line1 absolute border-0 border-t-2 "
+                     style={{  width:'320px',rotate: '334deg',right: '41px',top: '96px'}}>
+
                     </div>
                     <div className="bg-sm-green rounded-full w-12 h-12 p-3">
                       <MedicalServicesIcon />
                     </div>
                   </div>
-                  <div className="flex ">
-                    <div> - - - - - - - - - - </div>
+                  <div className="flex relative">
+                    <div className="line line2  absolute border-0 border-t-2" 
+                    style={{  width:'260px',rotate: '351deg',right: '68px',top: '60px'}}>
+                      
+                    </div>
                     <div className="bg-sm-green rounded-full w-12 h-12 p-3">
                       <MedicationIcon className="" />
                     </div>
                   </div>
-                  <div className="flex">
-                    <div> _ __ __ __ __ __ __ __ _ </div>
+                  <div className="flex relative">
+                    <div className="line line3  absolute border-0 border-t-2"
+                     style={{  width:'280px',rotate: '11deg',right: '57px',top: '0px'}}>
+                        
+                     </div>
                     <div className="bg-sm-green rounded-full w-12 h-12 p-3">
                       <CottageIcon />
                     </div>
                   </div>
-                  <div className="flex ">
-                    <div> - - - - - - - - - - - - - - - - - - -  </div>
+                  <div className="flex relative">
+                    <div className="line line4  absolute border-0 border-t-2 "
+                      style={{  width:'345px',rotate: '28deg',right: '41px',top: '-62px'}}> 
+                     
+                      </div>
                     <div className="bg-sm-green rounded-full w-12 h-12 p-3">
                       <CoronavirusIcon />
                     </div>
@@ -228,7 +238,7 @@ function About({ backgroundColor }) {
               </div>
             </div>
 
-            <div className="grid gap-4 pl-8 w-2/4">
+            <div className="grid gap-4 w-3/5">
               <div>
                 <h4 className="text-lg font-medium font-serif">
                   Safety First at Dynamic School
