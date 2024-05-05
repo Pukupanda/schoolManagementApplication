@@ -4,14 +4,14 @@ import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Navbar = () => {
+const Navbar = ({ backgroundColor }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const showNavBar = () => {
     setOpenMenu(!openMenu);
   };
   return (
-    <>
-      <nav className="w-10/12 m-auto h-16 flex justify-between">
+    <div className="w-full" style={{ backgroundColor }}>
+      <nav className="w-10/12 m-auto h-16 flex justify-between" >
         <div className="">
           <a>
             <Image
@@ -28,7 +28,7 @@ const Navbar = () => {
             <SearchIcon className="text-slate-100" />
           </div>
 
-          <div>
+          <div className="relativ">
             <button  onClick={showNavBar}>
               {openMenu ? (
                 <MenuIcon className="bg-primary w-32 h-8 rounded-lg text-white" />
@@ -38,8 +38,8 @@ const Navbar = () => {
             </button>
 
             {openMenu && (
-              <div className="w-48 bg-sm-green text-white absulate top-6 grid justify-items-center">
-                <a className="py-2 border-b-2 w-full">Abut Us</a>
+              <div className="w-48 bg-sm-green text-white absulate top-6 grid justify-items-center absolute z-30 p-2">
+                <a href="./aboutus" className="py-2 border-b-2 w-full">Abut Us</a>
                 <a className="py-2 border-b-2 w-full">Academics</a>
                 <a className="py-2 border-b-2 w-full">Admission</a>
                 <a className="py-2 border-b-2 w-full">Gallery</a>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
