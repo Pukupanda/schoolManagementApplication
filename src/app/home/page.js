@@ -24,7 +24,7 @@ const Home = () => {
           <div className="w-64 h-60 bg-sm-green rounded-md relative">
             <div className="w-72 h-60 bg-white rounded-md absolute top-3 right-4 p-2 pt-8 text-center">
               <h1 className="text-3xl">
-                Practical Teaching & Social Development
+                Practical Teaching & Social Developments
               </h1>
             </div>
           </div>
