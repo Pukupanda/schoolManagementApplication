@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next/link";
 
 const Navbar = ({ backgroundColor }) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -39,15 +40,16 @@ const Navbar = ({ backgroundColor }) => {
 
             {openMenu && (
               <div className="w-48 bg-sm-green text-white absulate top-6 grid justify-items-center absolute z-30 p-2">
-                <a href="./aboutus" className="py-2 border-b-2 w-full">Abut Us</a>
-                <a className="py-2 border-b-2 w-full">Academics</a>
-                <a className="py-2 border-b-2 w-full">Admission</a>
+               <Link href={'/aboutus'} className="py-2 border-b-2 w-full">Abut Us</Link> 
+                <Link href={'/academics'} className="py-2 border-b-2 w-full">Academics</Link>
+                <Link href={'/admission'} className="py-2 border-b-2 w-full">Admission</Link>
                 <a className="py-2 border-b-2 w-full">Gallery</a>
                 <a className="py-2 border-b-2 w-full">News/Calendar</a>
                 <a className="py-2 border-b-2 w-full">Contact Us</a>
                 <a className="py-2 border-b-2 w-full">Login</a>
               </div>
             )}
+            
           </div>
         </div>
       </nav>

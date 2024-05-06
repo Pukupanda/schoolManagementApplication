@@ -20,7 +20,7 @@ function Academics() {
         <div className="bg-white w-10/12 m-auto border-4 border-sm-green rounded-xl">
           <div className="flex justify-between ">
             <div className="p-4">
-              <h3 className="text-2xl text-sm-darkblue font-semibold pb-4 font-sans tracking-wider uppercase">
+              <h3 className="text-2xl text-sm-lblue800 font-semibold pb-4 font-sans tracking-wider uppercase">
                 Academics
               </h3>
               <h1 className="pb-4 text-4xl text-sm-darkblue font-bold	">

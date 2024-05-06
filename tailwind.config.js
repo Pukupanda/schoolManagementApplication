@@ -14,7 +14,10 @@ module.exports = {
           lightblue:'#3498DB',
           blue:'#1d5478',
           blue700:'#256c9b',
-          green100:'#ccf0ce'
+          green100:'#ccf0ce',
+          lblue900:'#16405c',
+          lblue800:'#1d5478',
+          lblue600:'#2f8ac7',
         }
       },
       backgroundImage: {
