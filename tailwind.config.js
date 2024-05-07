@@ -10,6 +10,7 @@ module.exports = {
       colors:{
         sm:{
           green:'#5BCE60',
+          green100:'#ccf0ce',
           darkblue:'#1B2835',
           lightblue:'#3498DB',
           blue:'#1d5478',
@@ -18,6 +19,9 @@ module.exports = {
           lblue900:'#16405c',
           lblue800:'#1d5478',
           lblue600:'#2f8ac7',
+          black8:'#595959',
+          gray:'#d9d9d9',
+          green200:'#5BCE60'
         }
       },
       backgroundImage: {

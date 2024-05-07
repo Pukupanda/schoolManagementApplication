@@ -1,14 +1,19 @@
 
 'use client'
 import React from "react";
-const Card = ({ title, description, imageUrl, onClick,width, height, titleClass }) => {
+import styles from "./style.module.css";
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+
+
+const Card = ({ title, description, imageUrl, buttonText,width, height, titleClass,link,btnclass,date }) => {
     return (
         <div className="">
             <img src={imageUrl} alt="Card Image" width={width} height={height} />
-            <div className="card-content">
-                {title && <h3 className={"card-title " + titleClass}>{title}</h3>}
-                {description && <p className="card-description">{description}</p>}
-                {onClick && <button className="card-button" onClick={onClick}></button>}
+            <div className={styles["card-content"]}>
+                {title && <h3 className={titleClass}>{title}</h3>}
+                {date && <div className='flex'><AccessTimeIcon className="text-base mr-2 "/><p className='text-sm text-sm-black8'>{date}</p></div>}
+                {description && <p>{description}</p>}
+                {buttonText && <a href={link} className={btnclass}>{buttonText}</a>}
             </div>
         </div>
     );
