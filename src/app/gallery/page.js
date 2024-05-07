@@ -42,7 +42,7 @@ function Gallery() {
       {/* ////// */}
       <div className="bg-white mt-8">
         <div className="bg-green-50 w-10/12 m-auto rounded-xl p-8">
-        <h1 className="text-2xl pl-4 pt-4">School Basics</h1>
+        <h1 className="text-4xl text-sm-lblue900 font-bold pl-4 pt-4">School Basics</h1>
             <div className="bg-white "> 
          
           <div className="flex gap-8 justify-between p-12">
@@ -73,7 +73,7 @@ function Gallery() {
       {/* //////////// */}
       <div className="bg-white py-8">
         <div className="bg-sm-green100 w-10/12 m-auto border-4 border-sm-green rounded-xl ">
-            <h2 className="text-2xl text-sm-darkblue font-semibold font-sans tracking-wider uppercase pl-6 pt-4">
+            <h2 className="text-4xl text-sm-lblue900 font-bold font-sans tracking-wider uppercase pl-6 pt-4">
             Sports
             </h2>
             <div className="flex p-8 gap-10">
@@ -113,12 +113,16 @@ function Gallery() {
       </div>
       {/* //////// */}
       <div className="bg-green-50 py-10">
-        <div className="bg-white w-10/12 m-auto rounded-xl ">
-            <h2 className="text-4xl font-bold">Extra Curriculum</h2>
-            <div className="flex gap-6">
-                <Card/>
-                <Card/>
-                <Card/>
+        <div className="bg-white w-10/12 m-auto rounded-xl p-14 shadow-lg  shadow-gray-500/50">
+            <h2 className="text-4xl text-sm-lblue900 font-bold pb-4">Extra Curriculum</h2>
+            <div className="grid grid-cols-3 gap-16">
+                <Card imageUrl={'/edufair.png'} width={300} height={300} title={'Science Education Fair'} titleClass={'text-center text-sm'} />
+                <Card imageUrl={'/edufair.png'} width={300} height={300} title={'Debate Competition'} titleClass={'text-center text-sm'}/>
+                <Card imageUrl={'/edufair.png'} width={300} height={300} title={'Projects Competition'} titleClass={'text-center text-sm'}/>
+                <Card imageUrl={'/edufair.png'} width={300} height={300} title={'Projects Competition'} titleClass={'text-center text-sm'}/>
+                <Card imageUrl={'/edufair.png'} width={300} height={300} title={'Projects Competition'} titleClass={'text-center text-sm'}/>
+                <Card imageUrl={'/edufair.png'} width={300} height={300} title={'Projects Competition'} titleClass={'text-center text-sm'}/>
+                
             </div>
         </div>
 
