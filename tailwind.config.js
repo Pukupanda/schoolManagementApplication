@@ -1,3 +1,5 @@
+const { green } = require('@mui/material/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -21,7 +23,8 @@ module.exports = {
           lblue600:'#2f8ac7',
           black8:'#595959',
           gray:'#d9d9d9',
-          green200:'#5BCE60'
+          green200:'#5BCE60',
+          lgreen:'#d3eed1'
         }
       },
       backgroundImage: {
