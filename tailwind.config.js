@@ -14,17 +14,18 @@ module.exports = {
           green:'#5BCE60',
           green100:'#ccf0ce',
           darkblue:'#1B2835',
-          lightblue:'#3498DB',
           blue:'#1d5478',
-          blue700:'#256c9b',
-          green100:'#ccf0ce',
-          lblue900:'#16405c',
-          lblue800:'#1d5478',
+          lightblue:'#3498DB',
+          lblue500:'#3498db',
           lblue600:'#2f8ac7',
+          blue700:'#256c9b',
+          lblue800:'#1d5478',
+          lblue900:'#16405c',
           black8:'#595959',
           gray:'#d9d9d9',
           green200:'#5BCE60',
-          lgreen:'#d3eed1'
+          lgreen:'#d3eed1',
+          black4:'#f0f0f0'
         }
       },
       backgroundImage: {

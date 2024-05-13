@@ -71,7 +71,7 @@ const Login = () => {
                   <p>{errors.email?.message}</p>
                 </label>
                 <label>
-                Email
+                Password
                   <input
                     {...register("password")}
                     placeholder="Enter your password"
