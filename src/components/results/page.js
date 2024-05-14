@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
+import React from 'react'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-const Attendance = ({ overview, grade, class_section, data }) => {
+
+const Result = ({overview, grade, class_section,data }) => {
   return (
     <div className="bg-white ">
       <div className="flex justify-between">
@@ -35,18 +35,19 @@ const Attendance = ({ overview, grade, class_section, data }) => {
           </ul>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 ">
-        {data.map((e, i) => {
+      <div>
+        {data.map((item) => {
           return (
-            <div className={i <=1?'border-r':''}>
-              <p className="text-sm-green300 py-6 text-4xl font-semibold text-center">{e.count}</p>
-              <p className="text-black text-sm text-center px-4">{e.title}</p>
+            <div className="grid grid-cols-3 gap-4 bg-sm-green100 m-4 px-4 rounded-xl">
+              <img className='mt-2' src={item.imageUrl} alt="Card Image" width={40} height={40}/>
+              <p className="text-black text-sm text-center p-4">{item.fullname}</p>
+              <p className="text-black text-sm text-center p-4">{item.marks}</p>
             </div>
           );
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Attendance;
+export default Result
