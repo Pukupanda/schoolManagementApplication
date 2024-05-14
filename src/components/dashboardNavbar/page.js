@@ -13,7 +13,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const DashboardNavbar = ({ imageUrl, width, height, name, title }) => {
   return (
-    <div className="w-full bg-sm-lblue500 h-screen ">
+    <div className="w-full bg-sm-lblue500 h-full ">
       <div className="px-8">
         <NotificationImportantIcon className="text-white my-4 text-4xl " />
         <div>

@@ -1,8 +1,7 @@
-'use client'
-import React from 'react'
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
-const Result = ({overview, grade, class_section,data }) => {
+import React from "react";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import PictureAsPdfOutlinedIcon from "@mui/icons-material/PictureAsPdfOutlined";
+const Resource = ({ overview, grade, class_section, pdf }) => {
   return (
     <div className="bg-white ">
       <div className="flex justify-between">
@@ -12,7 +11,10 @@ const Result = ({overview, grade, class_section,data }) => {
         <div>
           <ul className="w-full flex">
             <li className="group relative dropdown px-4 text-black cursor-pointer text-base tracking-wide">
-              <a className="text-sm-black11">{grade}<ArrowDropDownIcon/></a>
+              <a className="text-sm-black11">
+                {grade}
+                <ArrowDropDownIcon />
+              </a>
               <div className="group-hover:block dropdown-menu absolute hidden h-auto">
                 <ul className="top-0 w-32 bg-white shadow px-6 py-8">
                   <li className="py-1">
@@ -36,19 +38,15 @@ const Result = ({overview, grade, class_section,data }) => {
           </ul>
         </div>
       </div>
-      <div>
-        {data.map((item) => {
-          return (
-            <div className="grid grid-cols-3 gap-4 bg-sm-green100 m-4 px-4 rounded-xl hover:bg-sm-green300">
-              <img className='mt-2' src={item.imageUrl} alt="Card Image" width={40} height={40}/>
-              <p className="text-black text-sm text-center p-4">{item.fullname}</p>
-              <p className="text-black text-sm text-center p-4">{item.marks}</p>
-            </div>
-          );
-        })}
+
+      <div className="flex justify-between gap-8 bg-sm-green100 m-4 px-4 rounded-xl hover:bg-sm-green300">
+        <p className="text-black text-sm text-center p-4">{pdf}</p>
+        <a className="mt-3">
+          <PictureAsPdfOutlinedIcon className="text-2xl" />
+        </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Result
+export default Resource;
