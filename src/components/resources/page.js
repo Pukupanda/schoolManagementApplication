@@ -45,6 +45,7 @@ const Resource = ({ overview, grade, class_section, pdf }) => {
           <PictureAsPdfOutlinedIcon className="text-2xl" />
         </a>
       </div>
+      <button className="bg-sm-green400 py-1 px-4 text-white rounded-lg ml-4">See all</button>
     </div>
   );
 };

@@ -17,6 +17,7 @@ const TeacherDashboard = () => {
               imageUrl="/profile.png"
               title={"Nameste"}
               name="Rupa"
+              // data={[{dashboard:'Dashboard'},{MyProfile:'My Profile'},{salary:'Salary'},{result:'Result'},{attendance:'Attendance'},{assignments:'Assignments'},{resources:'Resources'}]}
             />
           </div>
 
