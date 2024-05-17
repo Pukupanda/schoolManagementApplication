@@ -14,9 +14,10 @@ const StudentDashboard = () => {
         <div className="flex gap-4 h-full">
           <div>
             <DashboardNavbar
-              imageUrl="/profile.png"
+              imageUrl="/studentprofile.png"
               title={"Nameste"}
               name="Rupa"
+              role="student"
             />
           </div>
 
@@ -38,8 +39,8 @@ const StudentDashboard = () => {
                 <AssignmentsCard
                   heading={"Assignments"}
                   data={[
-                    { id: "21", title: "Upload assignments" },
-                    { id: "21", title: "Upload assignments" },
+                    { id: "21", title: "Upload assignments",titleClassName:'text-2xl'},
+                    { id: "21", title: "Upload assignments",titleClassName:'text-2xl' },
                   ]}
                 />
               </div>

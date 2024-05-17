@@ -39,10 +39,11 @@ const Result = ({overview, grade, class_section,data }) => {
       <div>
         {data.map((item) => {
           return (
-            <div className="grid grid-cols-3 gap-4 bg-sm-green100 m-4 px-4 rounded-xl hover:bg-sm-green300">
-              <img className='mt-2' src={item.imageUrl} alt="Card Image" width={40} height={40}/>
-              <p className="text-black text-sm text-center p-4">{item.fullname}</p>
-              <p className="text-black text-sm text-center p-4">{item.marks}</p>
+            <div className="flex gap-4 bg-sm-green100 m-4 px-4 rounded-xl hover:bg-sm-green300">
+              <div className='w-1/5	'><img className='mt-2' src={item.imageUrl} alt="Card Image" width={40} height={40}/></div>
+              
+              <div className='w-3/5	'><p className="text-black text-sm text-center p-4">{item.fullname}</p></div>
+              <div className='w-1/5	'><p className="text-black text-sm text-center p-4">{item.marks}</p></div>
             </div>
           );
         })}

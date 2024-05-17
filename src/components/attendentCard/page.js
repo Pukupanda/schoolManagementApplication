@@ -9,6 +9,7 @@ const Attendance = ({ overview, grade, class_section, data }) => {
           <p className="text-sm-black9 text-lg pl-4">{overview}</p>
         </div>
         <div>
+          {grade &&
           <ul className="w-full flex">
             <li className="group relative dropdown px-4 text-black cursor-pointer text-base tracking-wide">
               <a className="text-sm-black11">{grade}<ArrowDropDownIcon/></a>
@@ -33,6 +34,7 @@ const Attendance = ({ overview, grade, class_section, data }) => {
               </div>
             </li>
           </ul>
+}
         </div>
       </div>
       <div className="grid grid-cols-3 gap-4 ">

@@ -72,7 +72,7 @@ function Footer() {
       <div className="bg-sm-blue">
           <div className="w-11/12 mx-auto  text-white text-xs font-light ">
             <p className="text-center text-base py-4">
-              &copy; 2023 - {new Date().getFullYear()} Travel the world pvt.
+              &copy; 2024 - {new Date().getFullYear()} Travel the world pvt.
               Ltd.All rights reserved.
             </p>
 

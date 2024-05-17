@@ -14,11 +14,14 @@ const TeacherDashboard = () => {
         <div className="flex gap-4 h-full">
           <div>
             <DashboardNavbar
+            
               imageUrl="/profile.png"
               title={"Nameste"}
               name="Rupa"
+              role="teacher"
               // data={[{dashboard:'Dashboard'},{MyProfile:'My Profile'},{salary:'Salary'},{result:'Result'},{attendance:'Attendance'},{assignments:'Assignments'},{resources:'Resources'}]}
             />
+            
           </div>
 
           <div className="mt-4">
@@ -39,8 +42,8 @@ const TeacherDashboard = () => {
                 <AssignmentsCard
                   heading={"Assignments"}
                   data={[
-                    { id: "21", title: "Create new assignments" },
-                    { id: "21", title: "Create new assignments" },
+                    { id: "21", title: "Create new assignments",titleClassName:'text-2xl' },
+                    { id: "21", title: "Create new assignments" ,titleClassName:'text-2xl'},
                   ]}
                 />
               </div>
