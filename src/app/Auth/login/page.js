@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import Footer from "../../../components/footer/page";
 import Navbar from "../../../components/navigation/page";
@@ -8,33 +8,113 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Select from 'react-select';
-const options = [
-    { value: 'Admin', label: 'Admin' },
-    { value: 'Teacher', label: 'Teacher' },
-    { value: 'Student', label: 'Student' },
-    { value: 'Staffs', label: 'Staffs' }
-  ]
+import Select from "react-select";
+import { addUserDetails } from "@/redux/reducerSlice/userSlice";
+
+const Role = {
+  admin: "Admin",
+  teacher: "Teacher",
+  student: "Student",
+  staff: "Staffs",
+};
+
+const data = {
+  users: [
+    {
+      id: 1,
+      username: "admin",
+      password: "admin",
+      firstName: "A",
+      lastName: "S",
+      role: Role.admin,
+    },
+    {
+      id: 2,
+      username: "student",
+      password: "student",
+      firstName: "S",
+      lastName: "S",
+      role: Role.student,
+    },
+    {
+      id: 2,
+      username: "teacher",
+      password: "teacher",
+      firstName: "T",
+      lastName: "S",
+      role: Role.teacher,
+    },
+    {
+      id: 2,
+      username: "staff",
+      password: "staff",
+      firstName: "S",
+      lastName: "S",
+      role: Role.staff,
+    },
+  ],
+};
 const Login = () => {
-    const schema = yup
-  .object({
-    Identity: yup.string().required("Identity is required"),
-    email: yup
-      .string()
-      .email("Email format is not valid")
-      .required(" Email is required"),
-    password: yup.string().required(" password is required"),
-   
-  })
-  .required();
-    const {
-        reset,
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm({
-        resolver: yupResolver(schema),
-      });
+  const schema = yup
+    .object({
+      Identity: yup.string().required("Identity is required"),
+      email: yup
+        .string()
+        .email("Email format is not valid")
+        .required(" Email is required"),
+      password: yup.string().required(" password is required"),
+    })
+    .required();
+  const {
+    reset,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  // mock data
+  // x = submicForm();
+  // {
+  //   const e = "admin";
+  //   const password = "admin";
+  //   const identity = "identity";
+  //   var selected = data.users.filter((user) => {
+  //     return user.username == "admin1" && user.password == "admin"
+  //       ? true
+  //       : false;
+  //   });
+
+  //   if (selected.length == 1) {
+  //     alert("success");
+  //   } else {
+  //     alert("failed");
+  //   }
+  // }
+  
+  const submicForm =  () => {
+    const e = "admin";
+    const password = "admin";
+    const identity = "identity";
+    var selected = data.users.filter((user) => {
+      return user.username == "admin1" && user.password == "admin"
+        ? true
+        : false;
+    });
+
+    if (selected.length == 1) {
+      dispatch(addUserDetails(data))
+      if(data?.userDetails.role === 'student') return router.push('dashboard/student')
+      if(data?.userDetails.role === 'teacher') return router.push('dashboard/teacher')
+      if(data?.userDetails.role === 'admin') return router.push('dashboard/admin')
+    } else {
+      toast("user not found");
+    }
+  }
+  
+  
+
   return (
     <>
       <Navbar backgroundColor="#b4e8b6" />
@@ -53,15 +133,19 @@ const Login = () => {
             </div>
             <div className="bg-white px-10">
               <h1 className="text-5xl py-10 font-bold text-center">Login</h1>
-              <form onSubmit=''>
-
+              <form onSubmit={submicForm}>
                 <label>
-                Identity
-                <Select options={options}  className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-green-100 w-3/4"/>
+                  Identity
+                  <Select
+                    options={Object(options)
+                      .keys()
+                      .map((key) => ({ value: key, label: options[key] }))}
+                    className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-green-100 w-3/4"
+                  />
                   <p>{errors.email?.message}</p>
                 </label>
                 <label>
-                Email
+                  Email
                   <input
                     {...register("email")}
                     placeholder="Enter your username/email"
@@ -71,7 +155,7 @@ const Login = () => {
                   <p>{errors.email?.message}</p>
                 </label>
                 <label>
-                Password
+                  Password
                   <input
                     {...register("password")}
                     placeholder="Enter your password"
@@ -80,7 +164,9 @@ const Login = () => {
                   />
                   <p>{errors.email?.message}</p>
                 </label>
-                <button className="bg-sm-green p-4 rounded-lg text-white w-3/4  mt-6">Submit now</button>
+                <button className="bg-sm-green p-4 rounded-lg text-white w-3/4  mt-6">
+                  Submit now
+                </button>
               </form>
             </div>
           </div>
