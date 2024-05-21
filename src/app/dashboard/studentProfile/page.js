@@ -7,23 +7,25 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
-const TeacherProfile = () => {
+const StudentProfile = () => {
   const {
     reset,
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({});
+
+  
   return (
     <>
       <div className="bg-sm-black4">
         <div className="flex gap-6 h-full">
           <div>
             <DashboardNavbar
-              imageUrl="/profile.png"
+              imageUrl="/studentprofile.png"
               title={"Nameste"}
               name="Rupa"
-              role="teacher"
+              role="student"
             />
           </div>
           <div className="my-4 w-full">
@@ -43,7 +45,7 @@ const TeacherProfile = () => {
                   <label>
                     Name:
                     <input
-                    //   {...register("email")}
+                      {...register("fullName")}
                       placeholder="Ex:Rupa Basnet Lamicchane"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -53,9 +55,9 @@ const TeacherProfile = () => {
 
 
                   <label>
-                    Teacher ID No.:
+                    Student ID No.:
                     <input
-                    //   {...register("email")}
+                      {...register("id")}
                       placeholder="Ex:112"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -66,9 +68,9 @@ const TeacherProfile = () => {
 
                 <div className="grid grid-cols-2 gap-10 px-8">
                   <label>
-                  Optional Contact Name:
+                  Guardian Contact No
                     <input
-                    //   {...register("name")}
+                      {...register("phoneNumber")}
                       placeholder="Ex: Hari Lal Basnet"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -80,7 +82,7 @@ const TeacherProfile = () => {
                   <label>
                   DOB:
                     <input
-                    //   {...register("email")}
+                      {...register("dateOfBirth")}
                       placeholder="Ex: yyyy/mm/dd"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -94,7 +96,7 @@ const TeacherProfile = () => {
                   Email:
 
                     <input
-                    //   {...register("name")}
+                      {...register("email")}
                       placeholder="Ex: rupabasnet@gmail.com"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -106,7 +108,7 @@ const TeacherProfile = () => {
                   <label>
                   Gender:
                     <input
-                    //   {...register("email")}
+                    //   {...register("gender")}
                       placeholder="Ex:Male"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -120,7 +122,7 @@ const TeacherProfile = () => {
                   Address:
 
                     <input
-                    //   {...register("name")}
+                    //   {...register("address")}
                       placeholder="Ex: Lumbini, Nepal"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -130,10 +132,10 @@ const TeacherProfile = () => {
 
 
                   <label>
-                  Monthly Salary:                    
+                  Current grade:                   
                   <input
-                    //   {...register("email")}
-                      placeholder="Ex: 60000"
+                      {...register("CurrentGrade")}
+                      placeholder="Ex: 4A"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
                     />
@@ -145,8 +147,8 @@ const TeacherProfile = () => {
                   <label>
                   Position:
                     <input
-                    //   {...register("name")}
-                      placeholder="Ex: Higher Secondary Full-time Teacher"
+                      {...register("Position")}
+                      placeholder="Ex: Sanskriti Club Captain"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
                     />
@@ -157,7 +159,7 @@ const TeacherProfile = () => {
                   <label>
                   Joined date:                
                   <input
-                    //   {...register("email")}
+                      {...register("JoinedDate")}
                       placeholder="Ex: 2018-11-04"
                       type="text"
                       className="my-4 p-3 block rounded-lg text-blueGray-600 text-md bg-white w-4/5"
@@ -178,4 +180,4 @@ const TeacherProfile = () => {
   );
 };
 
-export default TeacherProfile;
+export default StudentProfile;

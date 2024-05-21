@@ -83,7 +83,7 @@ const DashboardNavbar = ({ imageUrl, width, height, name, title, data, role }) =
         <ul>
               {navigationItems.map((item) => {
                 return (
-              <li className="grid grid-flow-row text-white text-sm gap-6 py-6">
+              <li className="grid grid-flow-row text-white text-sm gap-6 py-3">
                 <a >
                   {item.icon}
                   {item.label}
